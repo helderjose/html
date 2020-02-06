@@ -1,0 +1,206 @@
+body {
+	color: #727376;
+	font-family: 'Roboto', sans-serif;
+	background-color: #f0f0f0;
+	margin: 0;
+}
+
+.pFloatLeft {float: left;}
+.pFloatRight {float: right;}
+.pOverflowHidden {overflow: hidden;}
+
+.boxTamanho {
+	margin: 0 auto;
+	width: 95%;
+}
+
+#boxBranco {
+	padding: 24px 0;
+	background-color: #FFF;
+}
+
+h1 {
+	margin: 0;
+	height: 32px;
+}
+
+#logado {
+	width: 30%;
+	text-align: right;
+	margin-top: 12px;
+}
+	#logado a {
+		color: #9f270f;
+		text-decoration: none;
+	}
+		#logado a:hover {
+			text-decoration: underline;
+		}
+
+#nomeUsuario {
+	color: #02111b;
+}
+
+#pipeUsuario {
+	padding: 0 15px;
+}
+
+#boxMenu {
+	background-color: #a1392c;
+}
+
+	#menu ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+		#menu li .linkMenu {
+			display: block;
+			color: #FFF;
+			padding: 20px;
+			text-transform: uppercase;
+			text-decoration: none;
+		}
+			#menu li .linkMenu:hover {
+				background-color: #6f281f;
+			}
+		#menu li ul {
+			position:absolute; 
+			background-color:#a1392c; 
+			display:none;
+		}
+			#menu li ul a {
+				display: block;
+				padding: 10px 20px;
+				color: #FFF;
+				text-decoration: none;
+				text-transform: uppercase;
+			}
+				#menu li ul a:hover {
+					background-color: #6f281f;
+				}
+		#menu li:hover ul {display:block;}
+
+#ocultarTopo {
+	display: block;
+	width: 30px;
+	padding: 10px 0;
+	background: url(../img/setaMenu.gif) center center no-repeat #A1392C;
+	position: absolute;
+	right: 0;
+	top: 140px;
+}
+
+#ocultarTopo.ativo {
+	top: 0;
+	background-image: url(../img/setaMenuAtivo.gif);
+}
+
+#labelPagina {
+	font-size: 26px;
+	text-transform: uppercase;
+	color: #02111b;
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+/* =============================================================================
+   FORM
+   ========================================================================== */
+.boxInput1 {width: 100%;}
+.boxInput2 {width: 49%;}
+.boxInput3 {width: 32%;}
+	.boxInput3.mrg {margin: 0 2%;}	
+
+.labelPadrao {
+	display: block;
+	margin-bottom: 10px;
+}
+
+.selectPadrao {
+	width: 95%;
+	padding: 15px;
+	background-color: #FFF;
+	border: 1px solid #dbdbdb;
+}
+	.selectPadrao select {
+		width: 100%;
+		border: none;
+		background-color: #FFF;
+		color: #727376;
+		font-family: 'Roboto', sans-serif;
+	}
+	.boxInput3 .selectPadrao {width: 93%;}
+
+.inputPadrao {
+	width: 97.6%;
+	padding: 15px;
+	background-color: #FFF;
+	border: 1px solid #dbdbdb;
+	color: #727376;
+	font-family: 'Roboto', sans-serif;
+}
+	.boxInput2 .inputPadrao {width: 95.5%;}
+	.boxInput3 .inputPadrao {width: 92%;}
+
+.sepInputs {
+	margin-bottom: 30px;
+}
+
+.submitPadrao {
+	display: inline-block;
+	padding: 10px 35px;
+	border: none;
+	color: #FFF;
+	cursor: pointer;
+	background-color: #a1392d;
+	text-transform: uppercase;
+	font-family: 'Roboto', sans-serif;
+	margin-bottom: 40px;
+}
+	.submitPadrao:hover {background-color: #6f281f;}
+	.submitPadrao.mrg {margin: 0 30px;}
+
+/* =============================================================================
+   TABELA
+   ========================================================================== */
+.tabelaPadrao {
+	width: 100%;
+	text-align: left;
+	border-collapse: collapse;
+	margin-bottom: 40px;
+}
+	.tabelaPadrao th,
+	.tabelaPadrao td {
+		border: 1px solid #f0f0f0;
+	}
+
+	.tabelaPadrao th {
+		font-weight: normal;
+	}
+
+	.tabelaPadrao thead,
+	.tabelaPadrao tfoot {
+		color: #000;		
+		background-color: #fcb500;
+	}
+		.tabelaPadrao thead th,
+		.tabelaPadrao tfoot th {
+			padding: 10px;			
+		}
+		.tabelaPadrao th.tituloTabela {
+			font-weight: bold;
+			font-size: 20px;
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+	.tabelaPadrao tbody {
+		background-color: #FFF;	
+	}
+		.tabelaPadrao tbody th {
+			padding: 10px;
+		}
+		.tabelaPadrao tbody th.bordaG {border-right: 5px solid #f0f0f0;}
+		.tabelaPadrao tbody tr.linhaZebra {background-color: #f9f9f9;}

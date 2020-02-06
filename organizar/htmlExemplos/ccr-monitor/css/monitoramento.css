@@ -1,0 +1,54 @@
+.tabelaPadrao {width: 49%;}
+	.tabelaPadrao.tblMoni100 {width: 100%;text-align: center;}
+
+	.tabelaPadrao.tblMoni100 .txtLeft {
+		text-align: left;
+	}
+
+	.tabelaPadrao.tblDetalhe {
+		margin: 0 auto;
+		text-align: center;
+		margin-bottom: 40px;
+	}
+
+.linkToolTip {
+	cursor: pointer;
+	color: #9f270f;
+	text-transform: uppercase;
+}
+
+#formFiltro {
+	margin: 0 auto;
+	width: 580px;
+	margin-bottom: 40px;
+}
+
+.boxCheckbox {
+	text-transform: uppercase;
+	margin-right: 20px;
+}
+
+.imgTabela {
+	text-align: center;
+}
+
+#legenda {
+	margin: 0 auto;
+	width: 555px;
+	text-transform: uppercase;
+}
+	#legenda div {
+		margin-right: 20px;
+	}
+	#legenda span {
+		display: block;
+		margin-left: 10px;
+		margin-top: 3px;
+	}
+
+#data {
+	margin: 40px 0;
+	font-size: 14px;
+	text-align: center;
+	font-style: italic;
+}

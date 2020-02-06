@@ -1,0 +1,59 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: #f0f0f0;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 100px;
+}
+
+#boxLogin {
+	margin: 0 auto;
+	width: 300px;
+	background-color: #FFF;
+	padding: 20px;
+
+	-webkit-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.1);
+	box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.1);
+}
+
+.iptLogin {
+	width: 280px;
+	padding: 10px;
+	font-size: 16px;
+	color: #727376;
+	border: none;
+	border-bottom: 1px solid #f0f0f0;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	font-family: 'Roboto', sans-serif;
+}
+
+.iconUser {
+	position: absolute;
+	margin-left: 270px;
+	margin-top: 10px;
+	color: #727376;
+}
+
+.iconSenha {
+	position: absolute;
+	margin-top: 61px;
+	margin-left: -30px;
+	color: #727376;
+}
+
+#btn {
+	cursor: pointer;
+	width: 300px;
+	color: #FFF;
+	border: none;
+	text-transform: uppercase;
+	font-size: 16px;
+	font-family: 'Roboto', sans-serif;
+	background-color: #a1392c;
+	padding: 10px;
+	margin-top: 20px;
+}

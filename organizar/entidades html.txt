@@ -1,0 +1,8 @@
+http://www.w3schools.com/html/html_entities.asp
+http://www.w3schools.com/html/html_symbols.asp
+http://www.w3schools.com/charsets/ref_utf_currency.asp
+http://www.w3schools.com/charsets/ref_utf_arrows.asp
+http://www.w3schools.com/charsets/ref_utf_symbols.asp
+
+<   &lt;
+>   &gt;

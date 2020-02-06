@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8"/>
+		<title>CCR - Reenvio de Mensagem</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+		<link rel="stylesheet" type="text/css" href="css/base.css">
+
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				
+				$("#ocultarTopo").click(function (e) {
+					e.preventDefault();
+
+					if($("#topo").hasClass("oculto")) {
+						$("#topo").removeClass("oculto");
+						$("#topo").fadeIn();
+
+						$("#ocultarTopo").removeClass("ativo");
+					} else {
+						$("#topo").addClass("oculto");
+						$("#topo").fadeOut();
+
+						$("#ocultarTopo").addClass("ativo");
+					}
+					
+				});
+
+			});
+		</script>
+	</head>
+	<body>
+		<header id="topo">
+			<div id="boxBranco" class="pOverflowHidden">
+				<div class="boxTamanho">
+					<h1 class="pFloatLeft"><img src="img/logo.gif" alt="CCR" title="CCR"></h1>
+					<div id="logado" class="pFloatRight">
+						Bem vindo, <span id="nomeUsuario">Administrador</span> <span id="pipeUsuario">|</span> <a href="#" title="Sair">Sair</a>
+					</div>
+				</div>
+			</div>
+
+			<div id="boxMenu">
+				<div class="boxTamanho">
+					<nav id="menu" class="pOverflowHidden">
+						<ul>
+							<li class="pFloatLeft"><a href="#" class="linkMenu">Monitor</a></li>
+							<li class="pFloatLeft"><a href="#" class="linkMenu">Consulta</a></li>
+							<li class="pFloatLeft"><a href="#" class="linkMenu">Segurança</a></li>
+							<li class="pFloatLeft">
+								<a href="#" class="linkMenu">Operações</a>
+								<ul>
+									<li><a href="#">Controle de CAPs</a></li>
+									<li><a href="#">Carga Total de CAPs</a></li>
+									<li><a href="#">Reenvio de Mensagens</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<a href="#" id="ocultarTopo"></a>
+
+		<div class="boxTamanho">
+			<h2 id="labelPagina">Reenvio de Mensagem</h2>
+
+			<form>
+				<div class="sepInputs pOverflowHidden">
+					<div class="boxInput2 pOverflowHidden pFloatLeft">
+						<label class="labelPadrao">Concessionária</label>
+						<div class="selectPadrao">
+							<select>
+								<option>AUTOBAN</option>
+							</select>
+						</div>
+					</div>
+					<div class="boxInput2 pOverflowHidden pFloatRight">
+						<label class="labelPadrao">OSA</label>
+						<div class="selectPadrao">
+							<select>
+								<option>SEM PARAR</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="sepInputs pOverflowHidden">
+					<div class="boxInput1 pOverflowHidden">
+						<label class="labelPadrao">Mensagem</label>
+						<input type="text" name="mensagem" class="inputPadrao">
+					</div>
+				</div>
+
+				<input type="submit" name="enviar" value="enviar" title="Enviar" class="submitPadrao pFloatRight">
+			</form>
+		</div>
+	</body>
+</html>

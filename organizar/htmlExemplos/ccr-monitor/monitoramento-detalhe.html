@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8"/>
+		<title>CCR - Controle de Caps</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+		<link rel="stylesheet" type="text/css" href="css/base.css">
+		<link rel="stylesheet" type="text/css" href="css/monitoramento.css">
+
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				
+				$("#ocultarTopo").click(function (e) {
+					e.preventDefault();
+
+					if($("#topo").hasClass("oculto")) {
+						$("#topo").removeClass("oculto");
+						$("#topo").fadeIn();
+
+						$("#ocultarTopo").removeClass("ativo");
+					} else {
+						$("#topo").addClass("oculto");
+						$("#topo").fadeOut();
+
+						$("#ocultarTopo").addClass("ativo");
+					}
+					
+				});
+
+			});
+		</script>
+	</head>
+	<body>
+		<header id="topo">
+			<div id="boxBranco" class="pOverflowHidden">
+				<div class="boxTamanho">
+					<h1 class="pFloatLeft"><img src="img/logo.gif" alt="CCR" title="CCR"></h1>
+					<div id="logado" class="pFloatRight">
+						Bem vindo, <span id="nomeUsuario">Administrador</span> <span id="pipeUsuario">|</span> <a href="#" title="Sair">Sair</a>
+					</div>
+				</div>
+			</div>
+
+			<div id="boxMenu">
+				<div class="boxTamanho">
+					<nav id="menu" class="pOverflowHidden">
+						<ul>
+							<li class="pFloatLeft"><a href="#" class="linkMenu">Monitor</a></li>
+							<li class="pFloatLeft"><a href="#" class="linkMenu">Consulta</a></li>
+							<li class="pFloatLeft"><a href="#" class="linkMenu">Segurança</a></li>
+							<li class="pFloatLeft">
+								<a href="#" class="linkMenu">Operações</a>
+								<ul>
+									<li><a href="#">Controle de CAPs</a></li>
+									<li><a href="#">Carga Total de CAPs</a></li>
+									<li><a href="#">Reenvio de Mensagens</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<a href="#" id="ocultarTopo"></a>
+
+		<div class="boxTamanho">
+			<h2 id="labelPagina">Detalhe Concessionária</h2>
+
+			<div class="pOverflowHidden">
+				<table class="tabelaPadrao" style="width:100%;">
+					<thead>
+						<tr>
+							<th colspan="18" class="tituloTabela">Rodoanel</th>						
+						</tr>
+					</thead>
+					<tbody>					
+						<tr>
+							<th rowspan="2">Fila</th>
+							<th colspan="4" class="imgTabela bordaG"><img src="img/semparar.png" alt="Sem Parar" title="Sem Parar"></th>
+							<th colspan="4" class="imgTabela bordaG"><img src="img/autoexpresso.png" alt="Auto Expresso" title="Auto Expresso"></th>
+							<th colspan="4" class="imgTabela bordaG"><img src="img/conectcar.png" alt="ConectCar" title="ConectCar"></th>
+							<th colspan="4" class="imgTabela"><img src="img/movemais.png" alt="Move Mais" title="Move Mais"></th>
+						</tr>
+						<tr>
+							<th>Ser</th>
+							<th>Con</th>
+							<th>Pen</th>
+							<th class="bordaG">ERR</th>
+							<th>Ser</th>
+							<th>Con</th>
+							<th>Pen</th>
+							<th class="bordaG">ERR</th>
+							<th>Ser</th>
+							<th>Con</th>
+							<th>Pen</th>
+							<th class="bordaG">ERR</th>
+							<th>Ser</th>
+							<th>Con</th>
+							<th>Pen</th>
+							<th>ERR</th>
+						</tr>
+						<tr class="linhaZebra">
+							<th>Envio Passagem</th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th class="bordaG"><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconAtencao.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th class="bordaG"><img src="img/iconNok.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th class="bordaG"><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconAtencao.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconInfo.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+						</tr>
+						<tr>
+							<th>Recebimento Passagem</th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th class="bordaG"><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconAtencao.png" alt="Ok" title="Ok"></th>
+							<th class="bordaG"><img src="img/iconNok.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th class="bordaG"><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconAtencao.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconInfo.png" alt="Ok" title="Ok"></th>
+						</tr>
+						<tr class="linhaZebra">
+							<th>Recebimento Tag</th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th class="bordaG"><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconAtencao.png" alt="Ok" title="Ok"></th>
+							<th class="bordaG"><img src="img/iconNok.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th class="bordaG"><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconAtencao.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconInfo.png" alt="Ok" title="Ok"></th>
+						</tr>
+						<tr>
+							<th>Recebimento Requisita Imagens</th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th class="bordaG"><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconAtencao.png" alt="Ok" title="Ok"></th>
+							<th class="bordaG"><img src="img/iconNok.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th class="bordaG"><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconAtencao.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconInfo.png" alt="Ok" title="Ok"></th>
+						</tr>
+						<tr class="linhaZebra">
+							<th>Envio Sequencial Tag</th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th class="bordaG"><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconAtencao.png" alt="Ok" title="Ok"></th>
+							<th class="bordaG"><img src="img/iconNok.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th class="bordaG"><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconAtencao.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconInfo.png" alt="Ok" title="Ok"></th>
+						</tr>
+						<tr>
+							<th>Envio Imagens</th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th class="bordaG"><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconAtencao.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th class="bordaG"><img src="img/iconNok.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th class="bordaG"><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconAtencao.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconInfo.png" alt="Ok" title="Ok"></th>
+						</tr>
+						<tr class="linhaZebra">
+							<th>Envio Tarifas</th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th class="bordaG"><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconAtencao.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th class="bordaG"><img src="img/iconNok.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th class="bordaG"><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconAtencao.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th><img src="img/iconInfo.png" alt="Ok" title="Ok"></th>
+						</tr>
+						<tr>
+							<th><strong>Seq. Tag</strong></th>
+							<th></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th></th>
+							<th class="bordaG"></th>
+							<th></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th></th>
+							<th class="bordaG"></th>
+							<th></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th></th>
+							<th class="bordaG"></th>
+							<th></th>
+							<th><img src="img/iconOk.png" alt="Ok" title="Ok"></th>
+							<th></th>
+							<th></th>
+						</tr>
+					</tbody>
+				</table>
+
+				<table class="tabelaPadrao tblDetalhe">
+					<thead>
+						<tr>
+							<th>CAP</th>
+							<th>Sequencial de Envio CAP</th>
+							<th> Sequencial de Retorno CAP</th>
+						</tr>
+					</thead>
+					<tbody>					
+						<tr>
+							<th><span class="linkToolTip">CAMPO LIMPO</span></th>
+							<th>958</th>
+							<th>330</th>
+						</tr>
+						<tr>
+							<th><span class="linkToolTip">Caieiras</span></th>
+							<th>958</th>
+							<th>330</th>
+						</tr>
+						<tr>
+							<th><span class="linkToolTip">Itupeva</span></th>
+							<th>958</th>
+							<th>330</th>
+						</tr>
+						<tr>
+							<th><span class="linkToolTip">Sumare</span></th>
+							<th>958</th>
+							<th>330</th>
+						</tr>
+						<tr>
+							<th><span class="linkToolTip">Limeira</span></th>
+							<th>958</th>
+							<th>330</th>
+						</tr>
+						<tr>
+							<th><span class="linkToolTip">Perus</span></th>
+							<th>958</th>
+							<th>330</th>
+						</tr>
+						<tr>
+							<th><span class="linkToolTip">Valinhos</span></th>
+							<th>958</th>
+							<th>330</th>
+						</tr>
+						<tr>
+							<th><span class="linkToolTip">Valinhossul</span></th>
+							<th>958</th>
+							<th>330</th>
+						</tr>
+						<tr>
+							<th><span class="linkToolTip">Nova Odessa</span></th>
+							<th>958</th>
+							<th>330</th>
+						</tr>
+						<tr>
+							<th><span class="linkToolTip">Limeira-a</span></th>
+							<th>958</th>
+							<th>330</th>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<th>MSG</th>
+							<th>958</th>
+							<th></th>
+						</tr>
+					</tfoot>
+				</table>
+				
+			</div>
+
+			<div id="legenda" class="pOverflowHidden">
+				<div class="pFloatLeft">
+					<img src="img/iconOk.png" class="pFloatLeft" alt="Ok" title="Ok">
+					<span class="pFloatLeft">OK</span>
+				</div>
+				<div class="pFloatLeft">
+					<img src="img/iconAtencao.png" class="pFloatLeft" alt="Ok" title="Ok">
+					<span class="pFloatLeft">Atenção</span>
+				</div>
+				<div class="pFloatLeft">
+					<img src="img/iconNok.png" class="pFloatLeft" alt="Ok" title="Ok">
+					<span class="pFloatLeft">NOK</span>
+				</div>
+				<div class="pFloatLeft">
+					<img src="img/iconInfo.png" class="pFloatLeft" alt="Ok" title="Ok">
+					<span class="pFloatLeft">Sem informação de status</span>
+				</div>
+			</div>
+
+			<div id="data" class="pOverflowHidden">
+				Quinta-feira, 22 de Dezembro de 2016<br />
+				<i class="fa fa-clock-o"></i> 10:20:34
+			</div>
+		</div>		
+	</body>
+</html>

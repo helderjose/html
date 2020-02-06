@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8"/>
+		<title>CCR - Controle de Caps</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+		<link rel="stylesheet" type="text/css" href="css/base.css">
+
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				
+				$("#ocultarTopo").click(function (e) {
+					e.preventDefault();
+
+					if($("#topo").hasClass("oculto")) {
+						$("#topo").removeClass("oculto");
+						$("#topo").fadeIn();
+
+						$("#ocultarTopo").removeClass("ativo");
+					} else {
+						$("#topo").addClass("oculto");
+						$("#topo").fadeOut();
+
+						$("#ocultarTopo").addClass("ativo");
+					}
+					
+				});
+
+			});
+		</script>
+	</head>
+	<body>
+		<header id="topo">
+			<div id="boxBranco" class="pOverflowHidden">
+				<div class="boxTamanho">
+					<h1 class="pFloatLeft"><img src="img/logo.gif" alt="CCR" title="CCR"></h1>
+					<div id="logado" class="pFloatRight">
+						Bem vindo, <span id="nomeUsuario">Administrador</span> <span id="pipeUsuario">|</span> <a href="#" title="Sair">Sair</a>
+					</div>
+				</div>
+			</div>
+
+			<div id="boxMenu">
+				<div class="boxTamanho">
+					<nav id="menu" class="pOverflowHidden">
+						<ul>
+							<li class="pFloatLeft"><a href="#" class="linkMenu">Monitor</a></li>
+							<li class="pFloatLeft"><a href="#" class="linkMenu">Consulta</a></li>
+							<li class="pFloatLeft"><a href="#" class="linkMenu">Segurança</a></li>
+							<li class="pFloatLeft">
+								<a href="#" class="linkMenu">Operações</a>
+								<ul>
+									<li><a href="#">Controle de CAPs</a></li>
+									<li><a href="#">Carga Total de CAPs</a></li>
+									<li><a href="#">Reenvio de Mensagens</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<a href="#" id="ocultarTopo"></a>
+
+		<div class="boxTamanho">
+			<h2 id="labelPagina">Consultar</h2>
+
+			<form>
+				<div class="sepInputs pOverflowHidden">
+					<div class="boxInput2 pOverflowHidden pFloatLeft">
+						<label class="labelPadrao">Concessionária</label>
+						<div class="selectPadrao">
+							<select>
+								<option>AUTOBAN</option>
+							</select>
+						</div>
+					</div>
+					<div class="boxInput2 pOverflowHidden pFloatRight">
+						<label class="labelPadrao">OSA</label>
+						<div class="selectPadrao">
+							<select>
+								<option>SEM PARAR</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="sepInputs pOverflowHidden">
+					<div class="boxInput3 pOverflowHidden pFloatLeft">
+						<label class="labelPadrao">Tipo de Fila</label>
+						<div class="selectPadrao">
+							<select>
+								<option>Recebimento Passagem</option>
+							</select>
+						</div>
+					</div>
+					<div class="boxInput3 pOverflowHidden pFloatLeft mrg">
+						<label class="labelPadrao">Data de</label>
+						<input type="text" name="usuario" class="inputPadrao">
+					</div>
+					<div class="boxInput3 pOverflowHidden pFloatLeft">
+						<label class="labelPadrao">Data até</label>
+						<input type="text" name="Nome" class="inputPadrao">
+					</div>					
+				</div>
+				<div class="sepInputs pOverflowHidden">
+					<div class="boxInput3 pOverflowHidden pFloatLeft">
+						<label class="labelPadrao">Sequencial</label>
+						<input type="text" name="usuario" class="inputPadrao">
+					</div>
+					<div class="boxInput3 pOverflowHidden pFloatLeft mrg">
+						<label class="labelPadrao">Passagem ID</label>
+						<input type="text" name="usuario" class="inputPadrao">
+					</div>
+					<div class="boxInput3 pOverflowHidden pFloatLeft">
+						<label class="labelPadrao">Reenvio</label>
+						<input type="text" name="Nome" class="inputPadrao">
+					</div>					
+				</div>
+				<div>					
+					<input type="submit" name="Consultar" value="Consultar Logs" title="Consultar Logs" class="submitPadrao pFloatRight">
+					<input type="submit" name="Consultar" value="Consultar Erros" title="Consultar Erros" class="submitPadrao pFloatRight mrg">
+					<input type="submit" name="Consultar" value="Consultar Rasteabilidade" title="Consultar Rasteabilidade" class="submitPadrao pFloatRight">
+				</div>
+			</form>
+
+			<table class="tabelaPadrao">
+				<thead>
+					<tr>
+						<th>ID Rastreab</th>
+						<th>Concessionária</th>
+						<th>OSA</th>
+						<th>Tipo Fila</th>
+						<th>Pass. ID</th>
+						<th>Reenvio</th>
+						<th>Seq.</th>
+						<th>Data Recebimento</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>8635</th>
+						<th>AUTOBAN</th>
+						<th>Sem Parar</th>
+						<th>Recebimento Passagem</th>
+						<th>1408191148036310228</th>
+						<th>0</th>
+						<th>5</th>
+						<th>19/08/2014 14:41:02</th>
+					</tr>
+					<tr>
+						<th>8635</th>
+						<th>AUTOBAN</th>
+						<th>Sem Parar</th>
+						<th>Recebimento Passagem</th>
+						<th>1408191148036310228</th>
+						<th>0</th>
+						<th>5</th>
+						<th>19/08/2014 14:41:02</th>
+					</tr>
+					<tr>
+						<th>8635</th>
+						<th>AUTOBAN</th>
+						<th>Sem Parar</th>
+						<th>Recebimento Passagem</th>
+						<th>1408191148036310228</th>
+						<th>0</th>
+						<th>5</th>
+						<th>19/08/2014 14:41:02</th>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>

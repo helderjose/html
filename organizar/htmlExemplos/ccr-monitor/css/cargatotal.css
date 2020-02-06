@@ -1,0 +1,10 @@
+.tabCargaTotal a {
+	color: #a1392c;
+	text-decoration: none;
+}
+	.tabCargaTotal a:hover {
+		text-decoration: underline;
+	}
+	.tabCargaTotal a.mrg {
+		margin: 0 10%;
+	}

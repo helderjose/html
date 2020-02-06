@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style>
+    *:focus {
+      background-color: orange;
+    }
+  </style>
+</head>
+<!-- 
+  anotações
+  O link com title e aria-label, o leitor ignora o title e lê o aria-label.
+
+  title é o que aparece quando para o mouse em cima do link.
+  aria-label é o que o navegador vai ler (e ignorar o texto que está dentro da tag)
+ -->
+<body>
+  <header>
+    <p>cabeçalho de teste</p>
+
+    <!--
+      Se tiver aria-label o leitor ignora o texto que está dentro da tag
+    -->
+    <a href="www.google.com" title="título do primeiro link" aria-label="aria de teste">primeiro link para o google</a>
+
+    <!--
+      Sem aria-label o leitor lê o texto que está dentro da tag.
+    -->
+    <a href="www.google.com" title="título do segundo link" >segundo link para o google</a>
+
+    <span>
+      Dificuldades para usar nosso site?
+      <a href="#" aria-label="Texto para o leitor de tela">clique aqui</a>
+    </span>
+    
+  </header>
+  <main>
+    <h1>Título de Teste</h1>
+     <p>Parágrafo de teste.</p>
+  </main>
+  <footer>
+    <p>Rodapé de teste</p>
+  </footer>
+</body>
+</html>

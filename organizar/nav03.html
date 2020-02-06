@@ -1,0 +1,72 @@
+<style type="text/css">
+    nav,
+    nav .submenu{
+        overflow: hidden;
+        background-color: gray;
+    }
+    nav ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    nav li{
+        /*float: left;*/
+        display: inline-block;
+    }
+    nav .submenu li{
+        /*display: block;*/
+    }
+    nav a{
+        display: block;
+        color: #FFF;
+        padding: 10px;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+    nav a:hover{
+        background-color: #000;
+    }
+    .submenu{
+        display: none;
+
+    }
+    .submenu li{
+        display: block;
+    }
+    .submenu a{
+        padding-left: 20px;
+    }
+    .submenuParent:hover .submenu{
+        display: block;
+        position: absolute;
+    }
+
+    /* seta branca ponta para baixo */
+    .submenuParent > a::after{
+        width: 0;
+        height: 0;
+        content: "";
+        display: inline-block;
+        margin-left: 8px;
+        vertical-align: middle;
+        border-top: 7px solid #FFF;
+        border-right: 7px solid transparent;
+        border-left: 7px solid transparent;
+    }
+</style>
+
+
+<nav>
+    <ul>
+        <li><a href="#">HTML</a></li>
+        <li class="submenuParent">
+            <a href="#">JavaScript</a>
+            <ul class="submenu">
+                <li><a href="#">Node JS</a></li>
+                <li><a href="#">Angular JS</a></li>
+                <li><a href="#">JQuery</a></li>
+            </ul>
+        </li>
+        <li><a href="#">CSS</a></li>
+    </ul>
+</nav>
